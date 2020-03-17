@@ -1,3 +1,10 @@
+/*
+    Created by
+    Sumit Agarwal
+    https://leetcode.com/problems/range-sum-query-immutable
+*/
+
+
 class NumArray {
 public:
     vector<int> sum;

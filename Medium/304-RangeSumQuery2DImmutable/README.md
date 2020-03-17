@@ -26,7 +26,7 @@ Dynamic Programming
 
 ## Solution
 
-![304 - Range Sum Query 2D - Immutable - Solution](https://raw.githubusercontent.com/iamagarwalsumit/Leetcode/master/Easy/304-RangeSumQuery2DImmutable/solution.png)
+![304 - Range Sum Query 2D - Immutable - Solution](https://raw.githubusercontent.com/iamagarwalsumit/Leetcode/master/Medium/304-RangeSumQuery2DImmutable/solution.png)
 
 ## Complexity Analysis
 

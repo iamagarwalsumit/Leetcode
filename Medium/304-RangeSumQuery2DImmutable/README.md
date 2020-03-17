@@ -1,6 +1,6 @@
 # 304 - Range Sum Query 2D - Immutable
 
-Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by its upper left corner (*row1*, *col1*) and lower right corner (*row2*, *col2*). You may assume that the array doesn't change. You can find the problem [here](https://leetcode.com/problems/range-sum-query-immutable).
+Given a 2D matrix matrix, find the sum of the elements inside the rectangle defined by its upper left corner (*row1*, *col1*) and lower right corner (*row2*, *col2*). You may assume that the array doesn't change. You can find the problem [here](https://leetcode.com/problems/range-sum-query-2d-immutable/).
 
 ![304 - Range Sum Query 2D - Immutable - Problem](https://leetcode.com/static/images/courses/range_sum_query_2d.png)
 

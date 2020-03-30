@@ -45,9 +45,9 @@ The basis of a constant space solution is to use the array itself as a hash tabl
 ### Solution 2:
 
 - This solution uses the technique of encoding two integers into one with possibility to decode it to both integers back.
-    > If we have two integers `k` and `m` such that `m < n`, we can encode and decode them using the formula below:
-    > **Encoding** : `r = k * n + m (m < n)` 
-    > **Decoding** : `k = r / n`, `m = r % n`
+- If we have two integers `k` and `m` such that `m < n`, we can encode and decode them using the formula below:
+    **Encoding** : `r = k * n + m (m < n)` 
+    **Decoding** : `k = r / n`, `m = r % n`
 
 - We want to "serialize" all values to their indices. So `1` will come to `A[0]`, `2` to      `A[1]`. Essentially, `A[i]` will be encoded in `A[A[i]-1]` (just like the above solution). After this we can easily find the "gap". This is an easy task if we could use extra memory for another array. But we cannot. So we can use the "encoding" scheme offered above.
     - Clean every non-relevant item from the array to match the restriction m < n.
@@ -58,13 +58,11 @@ The basis of a constant space solution is to use the array itself as a hash tabl
 
 ## Complexity Analysis
 
- - Time complexity : `O(n)`. 
-    - For the first solution, consider position with `A[i]` = `i+1` as a CORRECT SLOT.
-        > CORRECT SLOT will never be changed: for CORRECT SLOT, `A[A[i] - 1]` always equals to `A[i]`, vice versa.
-        > For each swap, the number of CORRECT SLOT increases by at least 1: Position `A[A[i] - 1] = A[i]` becomes a CORRECT SLOT after swap, and according to (1), this must be a new CORRECT SLOT
-        >The maximum of CORRECT SLOT `<= n`
-        > Therefore, the complexity is `O(n)`
+ - Time complexity : `O(n)`. For Solution 2, it is pretty straightforward that the time complexity is `O(n)`. For Solution 1,
+    1) Consider position with `A[i]` = `i+1` as a *CORRECT SLOT*. For *CORRECT SLOT*, `A[A[i] - 1]` always equals to `A[i]` and vice versa, hence it will never change.
+    2) For each swap, the number of *CORRECT SLOT* increases by at least 1. Position `A[A[i] - 1] = A[i]` becomes a *CORRECT SLOT* after swap, and according to (1), this must be a new CORRECT SLOT.
+    3) The maximum of *CORRECT SLOT* `<= n`. Hence, the time complexity is `O(n)`
 
-    - For the second solution it is pretty straightforward that the time complexity is `O(n)`. 
+    - For the second solution it is 
 
  - Space complexity : `O(1)`. The array is itself used as a hash table/bookkeeping.

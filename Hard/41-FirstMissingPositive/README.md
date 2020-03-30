@@ -27,16 +27,22 @@ Array
 
 ## Solution
 
+The basis of a constant space solution is to use the array itself as a hash table for the elements present in the range [1,n].
+
 ### Solution 1: 
 
 Given size of the array as *n*, we simply ignore elements which are <= 0 or > n. The key here is to use swapping to keep constant space and also make use of the length of the array, which means there can be at most n positive integers. 
 
-For each element A[i], its right place in the array is A[A[i]-1]. If the element is not in its right place, just swap A[i] and A[A[i]-1]. The swap is included in a *while* loop, because after swapping the new element that comes in the place of A[i], can again require to be swapped. As in the example, 
+For each element A[i], its right place in the array is A[A[i]-1]. If the element is not in its right place, just swap A[i] and A[A[i]-1]. The swap is included in a *while* loop, because after swapping the new element that comes in the place of A[i], can again require to be swapped. 
 
-arr = [3,1,2]
-For A[0] = 3, the correct position is index 2, hence we swap A[0] and A[2] to get [2,1,3]. Now again for A[0] = 2, the correct index is 1, hence we swap A[0] and A[1] to get [1,2,3]. 
+As in the example, 
+Given arr = [3,1,2]. 
 
-Next, we check for which i, A[i]!=i+1 and that *i+1* is the missing number. If no such number is found then simply return n+1. 
+For A[0] = 3, the correct position is index 2, hence we swap A[0] and A[2] to get [2,1,3]. 
+
+Now again for A[0] = 2, the correct index is 1, hence we swap A[0] and A[1] to get [1,2,3]. 
+
+Next, we check for which i, A[i] != i+1 and that *i+1* is the missing number. If no such number is found then simply return n+1. 
 
 ![41 - First Missing Poisitve - Solution-1](https://raw.githubusercontent.com/iamagarwalsumit/Leetcode/master/Hard/41-FirstMissingPositive/solution-1.png)
 
@@ -51,8 +57,6 @@ r = k * n + m (m < n)
 Now to retrieve them use the following:
 
 k = r / n, m = r % n. Just to repeat: this trick is possible only if m is strictly less than n.
-
-Using this trick we can solve many interview tasks that require constant space and have some array which contains integers less than size or array n. If this array requires some extra information for every item, but we cannot loose the initial item value - this can be solved either creating new array (simple) or just encoding initial value and new value directly in the array.
 
 Turning back to the task:
 

@@ -22,6 +22,6 @@ Dynamic Programming
 
 ## Complexity Analysis
 
- - Time complexity : *O(1)* time per query, *O(n)* time pre-computation. Since the cumulative sum is cached, each *sumRange* query can be calculated in *O(1)* time.
+ - Time complexity : `O(1)` time per query, `O(n)` time pre-computation. Since the cumulative sum is cached, each `sumRange` query can be calculated in `O(1)` time.
 
- - Space complexity : *O(n)*.
+ - Space complexity : `O(n)`.

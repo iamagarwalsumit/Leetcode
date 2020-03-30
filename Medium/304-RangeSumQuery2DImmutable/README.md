@@ -30,6 +30,6 @@ Dynamic Programming
 
 ## Complexity Analysis
 
- - Time complexity : *O(1)* time per query, *O(mn)* time pre-computation. Since the cumulative sum is cached, each *sumRegion* query can be calculated in *O(1)* time.
+ - Time complexity : `O(1)` time per query, `O(mn)` time pre-computation. Since the cumulative sum is cached, each `sumRegion` query can be calculated in `O(1)` time.
 
- - Space complexity : *O(mn)*. The algorithm uses *O(mn)* space to store the cumulative region sum.
+ - Space complexity : `O(mn)`. The algorithm uses `O(mn)` space to store the cumulative region sum.

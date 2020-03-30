@@ -33,6 +33,6 @@ Dynamic Programming, String
 
 ## Complexity Analysis
 
- - Time complexity : *O(mn)* as it follows quite straightforward for the inserted loops.
+ - Time complexity : `O(mn)` as it follows quite straightforward for the inserted loops.
 
- - Space complexity : *O(2n)*. The algorithm uses *O(2n)* space because at any step only the previous row of the matrix is required. Hence only two arrays, each of length n can be used and each array can be used to store the computation of the (m%2)th loop using the other array.
+ - Space complexity : `O(2n)`. The algorithm uses `O(2n)` space because at any step only the previous row of the matrix is required. Hence only two arrays, each of length n can be used and each array can be used to store the computation of the `(m%2)th` loop using the other array.

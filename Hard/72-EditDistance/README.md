@@ -23,7 +23,7 @@ exection -> execution (insert 'u')
 
 ## Tags
 
-Dynamic Programming
+Dynamic Programming, String
 
 ## Solution
 

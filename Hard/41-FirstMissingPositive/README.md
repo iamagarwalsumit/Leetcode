@@ -54,7 +54,7 @@ The basis of a constant space solution is to use the array itself as a hash tabl
     - Encode `A[i]` using the above encoding scheme to store in `A[A[i]-1]`, ensuring `m < n` (the % in the second part ensures that)
     - Find the gap through the decoding technique, retrieving back `i+1` from `nums[i]`.
 
-![41 - First Missing Poisitve - Solution-2](https://raw.githubusercontent.com/iamagarwalsumit/Leetcode/master/Hard/41-FirstMissingPositive/solution2.png)
+![41 - First Missing Poisitve - Solution-2](https://raw.githubusercontent.com/iamagarwalsumit/Leetcode/master/Hard/41-FirstMissingPositive/solution-2.png)
 
 ## Complexity Analysis
 

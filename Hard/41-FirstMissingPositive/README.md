@@ -1,26 +1,24 @@
 # 41 - First Missing Positive
 
-Given an unsorted integer array, find the smallest missing positive integer.
+Given an unsorted integer array, find the smallest missing positive integer. Your algorithm should run in O(n) time and uses constant extra space.
 
 You can find the problem [here](https://leetcode.com/problems/first-missing-positive/).
 
 ## Example
 
 ```bash
-**Example 1:**
+Example 1:
 Input: [1,2,0]
 Output: 3
 
-**Example 2:**
+Example 2:
 Input: [3,4,-1,1]
 Output: 2
 
-**Example 3:**
+Example 3:
 Input: [7,8,9,11,12]
 Output: 1
 
-
-Your algorithm should run in O(n) time and uses constant extra space.
 ```
 
 ## Tags
@@ -44,23 +42,21 @@ Next, we check for which i, A[i]!=i+1 and that *i+1* is the missing number. If n
 
 ### Solution 2:
 
-This is not the most concise solution but it has one trick that may be useful for many beginners that allows to encode two integers into one with possibility to decode it to both integers back. Once you know it you will always use it as it allows to avoid tuples of integers (as java lacks such structure in its libraries) and use just one integer to represent two.
+This is not the most concise solution but it has one trick that may be useful for many beginners that allows to encode two integers into one with possibility to decode it to both integers back.
 
 So, if we have two integers k and m and m is always less than some n - we can encode both into one integer using formula:
 
-r = k * n + m
-(m < n)
-and now to retrieve them use the following:
+r = k * n + m (m < n) 
 
-k = r / n
-m = r % n
-And just to repeat: this trick is possible only if m is strictly less than n
+Now to retrieve them use the following:
+
+k = r / n, m = r % n. Just to repeat: this trick is possible only if m is strictly less than n.
 
 Using this trick we can solve many interview tasks that require constant space and have some array which contains integers less than size or array n. If this array requires some extra information for every item, but we cannot loose the initial item value - this can be solved either creating new array (simple) or just encoding initial value and new value directly in the array.
 
 Turning back to the task:
 
-We want to "seriallize" all values to their indices. So "1" will come to nums[0], "2" - nums[1] etc. Essentially, A[i] will be encoded in A[A[i]-1]. After this we can easily find the "gap". This is an easy task if we could use extra memory for another array. But we cannot. So we can use the "encoding" scheme offered above:
+We want to "seriallize" all values to their indices. So "1" will come to A[0], "2" - A[1] etc. Essentially, A[i] will be encoded in A[A[i]-1]. After this we can easily find the "gap". This is an easy task if we could use extra memory for another array. But we cannot. So we can use the "encoding" scheme offered above:
 
 1) Clean every non-relevant item from the array to match the restriction m < n.
 2) Encode A[i] using the above encoding scheme to store in A[A[i]-1], ensuring m < n. Hence the % in the second part.

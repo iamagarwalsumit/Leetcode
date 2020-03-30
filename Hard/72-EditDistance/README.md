@@ -27,9 +27,9 @@ Dynamic Programming, String
 
 ## Solution
 
-![72 - Edit Distance - Solution-1](https://raw.githubusercontent.com/iamagarwalsumit/Leetcode/master/Hard/72-EditDistance/solution1.png)
+![72 - Edit Distance - Solution-1](https://raw.githubusercontent.com/iamagarwalsumit/Leetcode/master/Hard/72-EditDistance/solution-1.png)
 
-![72 - Edit Distance - Solution-2](https://raw.githubusercontent.com/iamagarwalsumit/Leetcode/master/Hard/72-EditDistance/solution2.png)
+![72 - Edit Distance - Solution-2](https://raw.githubusercontent.com/iamagarwalsumit/Leetcode/master/Hard/72-EditDistance/solution-2.png)
 
 ## Complexity Analysis
 

@@ -61,8 +61,8 @@ The basis of a constant space solution is to use the array itself as a hash tabl
 ## Complexity Analysis
 
  - Time complexity : `O(n)`. For Solution 2, it is pretty straightforward that the time complexity is `O(n)`. For Solution 1,
-    1) Consider position with `A[i]` = `i+1` as a *CORRECT SLOT*. For *CORRECT SLOT*, `A[A[i] - 1]` always equals to `A[i]` and vice versa, hence it will never change.
-    2) For each swap, the number of *CORRECT SLOT* increases by at least 1. Position `A[A[i] - 1] = A[i]` becomes a *CORRECT SLOT* after swap, and according to (1), this must be a new CORRECT SLOT.
-    3) The maximum of *CORRECT SLOT* `<= n`. Hence, the time complexity is `O(n)`
+    1. Consider position with `A[i]` = `i+1` as a *CORRECT SLOT*. For *CORRECT SLOT*, `A[A[i] - 1]` always equals to `A[i]` and vice versa, hence it will never change.
+    2. For each swap, the number of *CORRECT SLOT* increases by at least 1. Position `A[A[i] - 1] = A[i]` becomes a *CORRECT SLOT* after swap, and according to (1), this must be a new CORRECT SLOT.
+    3. The maximum of *CORRECT SLOT* `<= n`. Hence, the time complexity is `O(n)`
 
  - Space complexity : `O(1)`. The array is itself used as a hash table/bookkeeping.

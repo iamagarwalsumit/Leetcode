@@ -3,6 +3,8 @@
     Sumit Agarwal
     https://leetcode.com/problems/range-sum-query-2d-immutable/
 */
+#include <vector>
+using namespace std;
 
 class NumMatrix {
 private:

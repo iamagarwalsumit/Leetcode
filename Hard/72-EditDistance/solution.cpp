@@ -4,6 +4,10 @@
     https://leetcode.com/problems/edit-distance/
 */
 
+#include <vector>
+#include <string>
+using namespace std;
+
 class Solution {
 public:
     typedef vector<vector<int>> VVI;

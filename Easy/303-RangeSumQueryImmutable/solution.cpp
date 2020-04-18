@@ -4,6 +4,8 @@
     https://leetcode.com/problems/range-sum-query-immutable/
 */
 
+#include <vector>
+using namespace std;
 
 class NumArray {
 private:
